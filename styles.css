@@ -1,0 +1,306 @@
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    background-color: #f4f7f6; /* Fondo suave */
+    color: #333; /* Color de texto por defecto */
+}
+
+/* Barra de navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* Fondo blanco como en iOS */
+    padding: 10px 30px; /* Reduce el padding de los costados */
+    max-width: 1200px; /* Añadir un ancho máximo para limitar el tamaño */
+    width: 100%;
+    margin: 20px auto 0; /* Agrega margen superior para bajar el nav */
+    color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e5e5e5; /* Borde suave de iOS */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transición suave */
+}
+
+/* Logo */
+nav .logo img {
+    width: 40px; /* Tamaño ajustable */
+    height: auto;
+}
+
+/* Lista de enlaces */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #007aff; /* Color de texto principal de iOS */
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 10px; /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #f0f0f5; /* Fondo sutil al pasar el mouse */
+    color: #0066cc; /* Cambio de color al hover */
+}
+
+/* Botón para cambio de tema */
+.theme-toggle button {
+    background: none;
+    border: none;
+    color: #007aff; /* Color de los botones de iOS */
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.theme-toggle button:hover {
+    color: #0066cc; /* Cambio de color en hover */
+}
+
+/* Estilo para modo oscuro */
+body.dark-mode {
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff; /* Color de texto blanco */
+}
+
+body.dark-mode nav {
+    background-color: #1c1c1e; /* Fondo oscuro de la barra */
+    border-bottom: 1px solid #2c2c2e; /* Borde oscuro */
+}
+
+body.dark-mode .nav-links li a {
+    color: #a8a8a8; /* Color de texto en modo oscuro */
+}
+
+body.dark-mode .nav-links li a:hover {
+    background-color: #333333; /* Fondo oscuro en hover */
+    color: #ffffff;
+}
+
+body.dark-mode .theme-toggle button {
+    color: #ffffff;
+}
+
+
+/* Estilo general de main */
+main {
+    padding: 40px 30px; /* Espaciado alrededor del contenido */
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centrado del contenido */
+}
+
+/* Sección de introducción */
+#intro {
+    text-align: center;
+    margin-bottom: 60px; /* Espacio debajo */
+}
+
+#intro h1 {
+    font-size: 2.5rem; /* Tamaño de fuente grande */
+    margin-bottom: 10px;
+}
+
+#intro span {
+    color: #007aff; /* Color de énfasis */
+}
+
+#intro p {
+    font-size: 1.2rem; /* Tamaño de fuente del párrafo */
+    color: #555;
+    margin-bottom: 30px; /* Espacio debajo */
+}
+
+#intro .buttons a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007aff; /* Color de los botones */
+    padding: 12px 25px;
+    margin: 0 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#intro .buttons a:hover {
+    background-color: #0066cc; /* Cambio de color al pasar el ratón */
+}
+
+/* Sección de experiencia */
+#experiencia {
+    margin-bottom: 60px;
+}
+
+#experiencia h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.experience-item {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.experience-item h3 {
+    font-size: 1.5rem;
+    color: #007aff;
+    margin-bottom: 10px;
+}
+
+.experience-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Estilo en modo oscuro */
+body.dark-mode #experiencia h2 {
+    color: #ffffff; /* Cambiar color del título en modo oscuro */
+}
+
+body.dark-mode .experience-item {
+    background-color: #2c2c2e; /* Fondo oscuro para las tarjetas */
+    color: #ffffff; /* Color del texto dentro de las tarjetas */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
+}
+
+body.dark-mode .experience-item h3 {
+    color: #007aff; /* Mantener el color del título del ítem */
+}
+
+body.dark-mode .experience-item p {
+    color: #ccc; /* Texto más claro en modo oscuro */
+}
+
+
+/* Sección de proyectos */
+#proyectos {
+    margin-bottom: 60px;
+}
+
+#proyectos h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.project {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    color: #007aff;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.project a {
+    text-decoration: none;
+    color: #007aff;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 20px;
+    background-color: #f0f0f5;
+    transition: background-color 0.3s;
+}
+
+.project a:hover {
+    background-color: #e0e0e5;
+}
+
+/* Estilo en modo oscuro para la sección de proyectos */
+body.dark-mode #proyectos h2 {
+    color: #ffffff; /* Color blanco para el título en modo oscuro */
+}
+
+body.dark-mode .project {
+    background-color: #2c2c2e; /* Fondo oscuro para los proyectos */
+    color: #ffffff; /* Texto blanco dentro de los proyectos */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
+}
+
+body.dark-mode .project h3 {
+    color: #007aff; /* Mantener el color del título en modo oscuro */
+}
+
+body.dark-mode .project p {
+    color: #ccc; /* Texto más claro en modo oscuro */
+}
+
+body.dark-mode .project a {
+    color: #007aff; /* Color de los enlaces */
+    background-color: #3a3a3c; /* Fondo oscuro para los botones */
+}
+
+body.dark-mode .project a:hover {
+    background-color: #555555; /* Fondo aún más oscuro al pasar el mouse */
+}
+
+/* Sección sobre mí */
+#sobre-mi {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+}
+
+#sobre-mi h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#sobre-mi p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Estilo en modo oscuro para la sección sobre mí */
+body.dark-mode #sobre-mi {
+    background-color: #2c2c2e; /* Fondo oscuro para la sección sobre mí */
+    color: #ffffff; /* Texto blanco */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
+}
+
+body.dark-mode #sobre-mi h2 {
+    color: #ffffff; /* Título en blanco en modo oscuro */
+}
+
+body.dark-mode #sobre-mi p {
+    color: #ccc; /* Texto más claro en modo oscuro */
+}
+
