@@ -1,306 +1,213 @@
-/* Reset global */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilo general */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    background-color: #f4f7f6; /* Fondo suave */
-    color: #333; /* Color de texto por defecto */
-}
-
-/* Barra de navegación */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff; /* Fondo blanco como en iOS */
-    padding: 10px 30px; /* Reduce el padding de los costados */
-    max-width: 1200px; /* Añadir un ancho máximo para limitar el tamaño */
-    width: 100%;
-    margin: 20px auto 0; /* Agrega margen superior para bajar el nav */
-    color: #333;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #e5e5e5; /* Borde suave de iOS */
-    border-radius: 12px; /* Bordes redondeados */
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Transición suave */
-}
-
-/* Logo */
-nav .logo img {
-    width: 40px; /* Tamaño ajustable */
-    height: auto;
-}
-
-/* Lista de enlaces */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #007aff; /* Color de texto principal de iOS */
-    font-size: 18px;
-    font-weight: 600;
-    padding: 5px 10px;
-    border-radius: 10px; /* Bordes redondeados */
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.nav-links li a:hover {
-    background-color: #f0f0f5; /* Fondo sutil al pasar el mouse */
-    color: #0066cc; /* Cambio de color al hover */
-}
-
-/* Botón para cambio de tema */
-.theme-toggle button {
-    background: none;
-    border: none;
-    color: #007aff; /* Color de los botones de iOS */
-    font-size: 24px;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.theme-toggle button:hover {
-    color: #0066cc; /* Cambio de color en hover */
-}
-
-/* Estilo para modo oscuro */
-body.dark-mode {
-    background-color: #121212; /* Fondo oscuro */
-    color: #ffffff; /* Color de texto blanco */
-}
-
-body.dark-mode nav {
-    background-color: #1c1c1e; /* Fondo oscuro de la barra */
-    border-bottom: 1px solid #2c2c2e; /* Borde oscuro */
-}
-
-body.dark-mode .nav-links li a {
-    color: #a8a8a8; /* Color de texto en modo oscuro */
-}
-
-body.dark-mode .nav-links li a:hover {
-    background-color: #333333; /* Fondo oscuro en hover */
-    color: #ffffff;
-}
-
-body.dark-mode .theme-toggle button {
-    color: #ffffff;
-}
-
-
 /* Estilo general de main */
 main {
-    padding: 40px 30px; /* Espaciado alrededor del contenido */
-    max-width: 1200px; /* Limita el ancho máximo */
-    margin: 0 auto; /* Centrado del contenido */
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Sección de introducción */
 #intro {
-    text-align: center;
-    margin-bottom: 60px; /* Espacio debajo */
+    text-align: left; /* Alineación a la izquierda */
+    margin-top: 20px;
+    margin-bottom: 60px;
+    background-color: #f8f8f8; /* Fondo gris suave */
+    padding: 50px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
+/* Contenedor para la foto y el botón "Disponible para trabajar" */
+#intro .profile-and-button {
+    display: flex;
+    align-items: center; /* Alinea la foto y el botón verticalmente */
+    gap: 20px; /* Espacio entre la foto y el botón */
+    margin-bottom: 20px; /* Separación de la foto y el título */
+}
+
+/* Estilo para la foto redonda encima del título */
+.profile-photo {
+    width: 120px; /* Tamaño de la foto */
+    height: 120px;
+    border-radius: 50%; /* Hace la imagen redonda */
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #007aff; /* Borde azul para resaltar */
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen ocupe todo el contenedor */
+}
+
+/* Título de la sección */
 #intro h1 {
-    font-size: 2.5rem; /* Tamaño de fuente grande */
+    font-size: 2rem; /* Ajustar el tamaño */
     margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
 }
 
+/* Destacar el nombre */
 #intro span {
     color: #007aff; /* Color de énfasis */
 }
 
+/* Descripción de la sección */
 #intro p {
-    font-size: 1.2rem; /* Tamaño de fuente del párrafo */
-    color: #555;
-    margin-bottom: 30px; /* Espacio debajo */
-}
-
-#intro .buttons a {
-    text-decoration: none;
-    color: #fff;
-    background-color: #007aff; /* Color de los botones */
-    padding: 12px 25px;
-    margin: 0 10px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-#intro .buttons a:hover {
-    background-color: #0066cc; /* Cambio de color al pasar el ratón */
-}
-
-/* Sección de experiencia */
-#experiencia {
-    margin-bottom: 60px;
-}
-
-#experiencia h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.experience-item {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
+    font-size: 1.1rem; /* Ajustar tamaño del párrafo */
+    color: #3b3b3b;
     margin-bottom: 20px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-.experience-item h3 {
-    font-size: 1.5rem;
-    color: #007aff;
-    margin-bottom: 10px;
-}
-
-.experience-item p {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Estilo en modo oscuro */
-body.dark-mode #experiencia h2 {
-    color: #ffffff; /* Cambiar color del título en modo oscuro */
-}
-
-body.dark-mode .experience-item {
-    background-color: #2c2c2e; /* Fondo oscuro para las tarjetas */
-    color: #ffffff; /* Color del texto dentro de las tarjetas */
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
-}
-
-body.dark-mode .experience-item h3 {
-    color: #007aff; /* Mantener el color del título del ítem */
-}
-
-body.dark-mode .experience-item p {
-    color: #ccc; /* Texto más claro en modo oscuro */
-}
-
-
-/* Sección de proyectos */
-#proyectos {
-    margin-bottom: 60px;
-}
-
-#proyectos h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.project {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin-bottom: 20px;
-}
-
-.project h3 {
-    font-size: 1.5rem;
-    color: #007aff;
-    margin-bottom: 10px;
-}
-
-.project p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.project a {
-    text-decoration: none;
-    color: #007aff;
-    padding: 10px 20px;
-    margin-right: 10px;
-    border-radius: 20px;
-    background-color: #f0f0f5;
-    transition: background-color 0.3s;
-}
-
-.project a:hover {
-    background-color: #e0e0e5;
-}
-
-/* Estilo en modo oscuro para la sección de proyectos */
-body.dark-mode #proyectos h2 {
-    color: #ffffff; /* Color blanco para el título en modo oscuro */
-}
-
-body.dark-mode .project {
-    background-color: #2c2c2e; /* Fondo oscuro para los proyectos */
-    color: #ffffff; /* Texto blanco dentro de los proyectos */
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
-}
-
-body.dark-mode .project h3 {
-    color: #007aff; /* Mantener el color del título en modo oscuro */
-}
-
-body.dark-mode .project p {
-    color: #ccc; /* Texto más claro en modo oscuro */
-}
-
-body.dark-mode .project a {
-    color: #007aff; /* Color de los enlaces */
-    background-color: #3a3a3c; /* Fondo oscuro para los botones */
-}
-
-body.dark-mode .project a:hover {
-    background-color: #555555; /* Fondo aún más oscuro al pasar el mouse */
-}
-
-/* Sección sobre mí */
-#sobre-mi {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    text-align: center;
-}
-
-#sobre-mi h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-#sobre-mi p {
-    font-size: 1.2rem;
-    color: #555;
     line-height: 1.6;
 }
 
-/* Estilo en modo oscuro para la sección sobre mí */
-body.dark-mode #sobre-mi {
-    background-color: #2c2c2e; /* Fondo oscuro para la sección sobre mí */
-    color: #ffffff; /* Texto blanco */
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
+/* Estilo de los botones */
+#intro .buttons {
+    display: flex; /* Alinea los botones en una fila */
+    flex-direction: row; /* Fila en lugar de columna */
+    gap: 10px; /* Reducir espacio entre los botones */
 }
 
-body.dark-mode #sobre-mi h2 {
-    color: #ffffff; /* Título en blanco en modo oscuro */
+/* Estilo de cada botón */
+/* Estilo general de los botones */
+#intro .buttons a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007aff;
+    padding: 6px 15px;  /* Reduce más el padding para botones más pequeños */
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center; /* Alinea el texto e icono en línea */
+    justify-content: center;
+    gap: 6px; /* Espacio más pequeño entre el icono y el texto */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-body.dark-mode #sobre-mi p {
-    color: #ccc; /* Texto más claro en modo oscuro */
+/* Iconos con un tamaño adecuado */
+#intro .buttons i {
+    font-size: 0.9rem; /* Tamaño del icono más pequeño */
 }
 
+/* Efecto hover de los botones */
+#intro .buttons a:hover {
+    background-color: #00b3e3;
+    transform: translateY(-3px);  /* Efecto hover más sutil */
+}
+
+/* Estilo de los botones "Disponible para trabajar" */
+#intro .buttons .available {
+    background-color: #28a745; /* Verde para resaltar este botón */
+}
+
+/* Botón "Disponible para trabajar" cuando hace hover */
+#intro .buttons .available:hover {
+    background-color: #218838;
+}
+
+/* Efecto hover de los botones */
+#intro .buttons a:hover {
+    background-color: #00b3e3;
+    transform: translateY(-5px);
+}
+
+/* Botón "Disponible para trabajar" */
+
+/* Estilo del botón "Disponible para trabajar" */
+#intro .buttons .available {
+    background-color: #28a745; 
+    border: 2px solid transparent; 
+    padding: 8px 18px; 
+    box-shadow: 0px 4px 8px rgba(40, 167, 69, 0.2); 
+    border-radius: 30px; 
+    position: relative; 
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease; 
+}
+
+/* Efecto hover del botón "Disponible para trabajar" */
+#intro .buttons .available:hover {
+    background-color: #218838; /* Color más oscuro para el hover */
+    border: 2px solid #007aff; /* Borde azul al pasar el mouse */
+    box-shadow: 0px 6px 12px rgba(40, 167, 69, 0.3); /* Sombra más pronunciada */
+    transform: scale(1.1); /* Aumenta el tamaño del botón */
+    width: 120%; /* Expande el botón */
+}
+
+/* Efecto de expansión suave */
+#intro .buttons .available:before {
+    content: ''; /* Genera un pseudo-elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit; /* Sigue los bordes redondeados */
+    background: rgba(0, 122, 255, 0.1); /* Fondo azul suave */
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.3s ease; /* Transición suave */
+}
+
+/* Mostrar el pseudo-elemento cuando se hace hover */
+#intro .buttons .available:hover:before {
+    opacity: 1; /* Hace visible el fondo azul suave */
+}
+
+
+
+/* Estilos en modo oscuro */
+body.dark-mode #intro {
+    background-color: #0d1d31;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode #intro h1 {
+    color: #ffffff;
+}
+
+body.dark-mode #intro p {
+    color: #ddd;
+}
+
+body.dark-mode footer p {
+    color: #ddd;
+}
+
+/* Estilo para el footer */
+footer {
+    color: #333; /* Texto en gris oscuro */
+    text-align: center; /* Centrado del texto */
+    padding: 20px 0; /* Espaciado superior e inferior */
+    font-size: 0.9rem; /* Tamaño de fuente pequeño */
+    font-family: 'Arial', sans-serif; /* Fuente limpia y sencilla */
+    letter-spacing: 0.5px; /* Espaciado entre letras */
+
+    margin-top: 50px; /* Espaciado superior */
+}
+
+/* Estilo para el texto en el footer */
+footer p {
+    margin: 0; /* Elimina márgenes por defecto */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+/* Efecto hover en el texto */
+footer p:hover {
+    color: #007aff; /* Cambia a azul suave al pasar el mouse */
+    cursor: pointer; /* Cambia el cursor a mano al pasar el mouse */
+}
+
+/* Estilo para dispositivos móviles */
+@media (max-width: 600px) {
+    footer {
+        font-size: 0.8rem; /* Reduce el tamaño de la fuente en móviles */
+    }
+}

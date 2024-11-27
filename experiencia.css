@@ -1,0 +1,102 @@
+/* Contenedor general del timeline */
+.timeline {
+    position: relative;
+    padding-left: 40px; /* Espacio para la línea del timeline */
+    margin-top: 20px;
+}
+
+/* Elemento del timeline */
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px; /* Espacio entre los elementos del timeline */
+    padding-left: 10px;
+}
+
+/* Línea vertical del timeline */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 0; /* Alineado a la izquierda */
+    top: 0;
+    width: 3px;
+    height: 100%; /* La línea cubre todo el alto del item */
+    background-color: #565758;
+    z-index: 1; /* Para que la línea esté detrás del punto y contenido */
+}
+
+/* Punto centrado sobre la línea vertical, alineado con el título */
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    left: 1.5px; /* Centrado horizontal respecto a la línea */
+    top: 20px; /* Alineado con el inicio del título */
+    width: 12px;
+    height: 12px;
+    background-color: #007aff; /* Color del punto */
+    border-radius: 50%; /* Hacerlo redondo */
+    transform: translateX(-50%); /* Asegurarse de que el punto esté centrado respecto a la línea */
+    z-index: 1; /* Asegurarse de que el punto esté por encima de la línea */
+}
+
+/* Contenido dentro de cada item del timeline */
+.timeline-content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 30px;
+}
+
+/* Título del timeline (a la izquierda) */
+.timeline-content h3 {
+    font-size: 1.5rem;
+    color: #007aff;
+    margin-right: 20px;
+    flex: 0 0 250px;
+    font-weight: bold;
+}
+
+/* Descripción del timeline (a la derecha) */
+.timeline-content p {
+    font-size: 1rem;
+    color: #555;
+    flex: 1;
+    line-height: 1.5;
+}
+
+#experiencia {
+    background-color: #ffffff;
+    border-radius: 12px;
+    
+    padding: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+
+    text-align: left;
+}
+/* Estilo en modo oscuro */
+body.dark-mode #experiencia h2 {
+    color: #ffffff;
+}
+
+body.dark-mode #experiencia {
+    background-color: #0d1d31;
+    color: #ffffff;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .timeline-content h3 {
+    color: #007aff;
+    
+}
+
+body.dark-mode .timeline-content p {
+    color: #ccc;
+}
+
+body.dark-mode .timeline-item::before {
+    background-color: #565758;
+    
+}
+
+body.dark-mode .timeline-item::after {
+    background-color: #00b3e3;
+}

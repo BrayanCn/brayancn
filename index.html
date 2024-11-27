@@ -1,80 +1,246 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="sobremi.css">
+    <link rel="stylesheet" href="proyectos.css">
+    <link rel="stylesheet" href="experiencia.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
 </head>
+
 <body>
     <header>
         <nav>
-            <!-- Logo -->
+
             <div class="logo">
-                <!-- <img src="assets/logo.png" alt="Logo"> -->
+                <!-- Logo opcional -->
             </div>
-        
-            <!-- Enlaces de navegación -->
             <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Sobre mí</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Proyectos</a></li>
-                <li><a href="#">Contactar</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contactar</a></li>
             </ul>
-        
-            <!-- Botón para cambiar tema -->
             <div class="theme-toggle">
                 <button id="theme-toggle">🌙</button>
             </div>
         </nav>
-        
     </header>
+
     <main>
         <section id="intro">
-            <h1>Hey, soy <span>Brayan copara</span></h1>
-            <p>
-                +3 años de experiencia. <strong>Ingeniero de Software </strong>.
-                Especializado en desarrollo de aplicaciones web android.
-            </p>
-            <div class="buttons">
-                <a href="#contacto" class="button">Contáctame</a>
-                <a href="#" class="button">LinkedIn</a>
+            <!-- Contenedor para la foto y el botón "Disponible para trabajar" -->
+            <div class="profile-and-button">
+                <!-- Imagen redonda encima del título -->
+                <div class="profile-photo">
+                    <img src="assets\452242305_1019698389811297_8311835553865266946_n.jpg" alt="Foto de Brayan Copara">
+                </div>
+                <div class="buttons">
+                    <!-- Botón "Disponible para trabajar" -->
+                    <a href="mailto:xbrayanxop7@gmail.com" class="button available">Disponible para trabajar</a>
+                </div>
             </div>
+
+            <h1>Hey, soy <span>Brayan Copara</span></h1>
+
+            <p>
+                +3 años de experiencia. <strong>Ingeniero de Software</strong>.
+                Especializado en desarrollarse en las áreas de gestión de
+                recursos, análisis de datos y análisis de procesos. En la
+                actualidad, cuento con conocimientos en las herramientas de
+                Excel, Power Bi, PHP y SQL. de aplicaciones web y Android.
+            </p>
+
+            <!-- Botones adicionales -->
+            <div class="buttons">
+                <a href="mailto:xbrayanxop7@gmail.com" class="button">
+                    <i class="fas fa-envelope"></i> Contáctame
+                </a>
+
+                <a href="https://www.linkedin.com/in/brayancn/" class="button" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+
+                <a href="https://www.instagram.com/brayan_copara/" class="button" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.facebook.com/Haker.com.BCN" class="button" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <a href="brayancoparanavarro.pdf" class="button" download>
+                    <i class="fas fa-download"></i> Descargar CV
+                </a>
+                
+            </div>
+
         </section>
+
+
+
 
         <section id="experiencia">
             <h2>Experiencia laboral</h2>
-            <div class="experience-item">
-                <h3>Creación de Contenido - Twitch</h3>
-                <p>Actualmente divulgando programación y desarrollo web.</p>
-            </div>
-            <div class="experience-item">
-                <h3>Principal Frontend Engineer - Adevinta Spain</h3>
-                <p>Mejoras del 30% en software y despliegues CI/CD.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Factura Peru tesla
+                        </h3>
+                        <p>Desarrollador web en -LARAVEL , PYTHON ,vue , Angular , js
+                            Desarrollador de apps - flutter con gestión de google apps
+                            SQL -BASES DE DATOS
+                            POWER BI -análisis de datos para mejorar los sistemas de facturación
+                            Administración de servidores y mantenimiento de ellos mismo
+                            GIT</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>SoftDesign</h3>
+                        <p>Desarrollador web en -LARAVEL , PYTHON
+                            Desarrollador de apps
+                            SQL -BASES DE DATOS</p>
+                    </div>
+                </div>
             </div>
         </section>
+
+
+
+
+
 
         <section id="proyectos">
             <h2>Proyectos</h2>
             <div class="project">
-                <h3>SVGL</h3>
-                <p>Biblioteca de logos SVG con Next.js y Tailwind CSS.</p>
-                <a href="#" class="button">Code</a>
-                <a href="#" class="button">Preview</a>
+                <div class="image-container">
+                    <img src="assets\Screenshot_7.png" alt="Proyecto SVGL">
+                </div>
+                <div class="text-container">
+                    <h3>eCommerce CMS</h3>
+                    <p>eCommerce CMS es una avanzada solución en línea diseñada para optimizar la gestión de tiendas digitales. Desarrollada utilizando el poderoso framework de PHP, Laravel, y el popular framework HTML, Bootstrap, esta plataforma garantiza una experiencia de usuario fluida, escalable y eficiente. Gracias a la integración de un sistema de base de datos robusto basado en MySQL, eCommerce CMS permite a los administradores crear, gestionar y consultar bases de datos de manera ágil y segura, facilitando el control total sobre productos, inventarios, pedidos y clientes. Con una arquitectura flexible y fácil de usar, esta herramienta está especialmente diseñada para empresas que buscan potenciar su presencia en línea y optimizar sus procesos comerciales.</p>
+
+                    
+                    <!-- Iconos de las herramientas -->
+                    <div class="tech-icons">
+                        <i class="fab fa-laravel"></i>
+                        <i class="fab fa-bootstrap"></i>
+                        <i class="fas fa-database"></i>
+                    </div>
+                
+                    <!-- Botones con alertas -->
+                    <a href="#" class="button" onclick="showAlert('Code')">
+                        <i class="fas fa-code"></i> Code
+                    </a>
+                    <a href="#" class="button" onclick="showAlert('Code')">
+                        <i class="fas fa-eye"></i> Preview
+                    </a>
+                </div>
+                
+            </div>
+
+            <div class="project">
+                <div class="image-container">
+                    <img src="assets/Screenshot_2.png" alt="Proyecto SVGL">
+                </div>
+                <div class="text-container">
+                    <h3>Wsender</h3>
+                    <p>Sender es una poderosa plataforma de marketing diseñada específicamente para WhatsApp, que permite a las empresas gestionar y automatizar sus campañas de marketing a través de este popular canal de comunicación. Esta solución innovadora está construida utilizando el robusto marco de trabajo Laravel en el backend, lo que garantiza una arquitectura escalable y segura. Además, el sistema integra Node.js para ofrecer un rendimiento en tiempo real y la capacidad de manejar múltiples interacciones simultáneas, mejorando la eficiencia y la experiencia del usuario. Con Sender, las empresas pueden optimizar sus estrategias de comunicación y conectar con sus clientes de manera efectiva y directa.</p>
+
+                    
+                    <!-- Iconos de las herramientas -->
+                    <div class="tech-icons">
+                        <i class="fab fa-laravel"></i>
+                        <i class="fab fa-node"></i>
+                    </div>
+            
+                    <!-- Botones con alertas -->
+                    <a href="#" class="button" onclick="showAlert('Code')">
+                        <i class="fas fa-code"></i> Code
+                    </a>
+                    
+                    <a href="#" class="button" onclick="showAlert('Code')">
+                        <i class="fas fa-eye"></i> Preview
+                    </a>
+                </div>
+            </div>
+            
+        </section>
+
+
+
+        <section id="sobre-mi">
+            <div class="content-container">
+                <div class="text-container">
+                    <h2>Sobre mí</h2>
+                    <p>
+                        Brayan Copara
+                        Desarrollador Web | Desarrollador de Apps | Egresado de Ingeniería de Sistemas e Informática
+
+                        Soy un apasionado desarrollador web y de aplicaciones, con experiencia en diversas tecnologías y
+                        herramientas que abarcan
+                        desde el desarrollo backend hasta la gestión de bases de datos y análisis de datos. Me
+                        especializo en:
+                    </p>
+                    <div class="sobre-mi-content">
+                        <h3>Desarrollo Web</h3>
+                        <span>Con amplia experiencia en Laravel, Python, Vue.js, Angular, y JavaScript.</span>
+                        
+                    </div>
+
+                    <div class="sobre-mi-content">
+                        <h3>Desarrollo de Aplicaciones</h3>
+                        <span>Trabajo con Flutter para la creación de aplicaciones móviles, y tengo experiencia en la integración y gestión de servicios de Google Apps.</span>
+                    </div>
+              
+                    <div class="sobre-mi-content">
+                        <h3>Bases de Datos</h3>
+                        <span>Conocimiento profundo en SQL y en la administración y optimización de bases de datos para mejorar el rendimiento de las aplicaciones.</span>
+                    </div>
+                    <div class="sobre-mi-content">
+                        <h3>Análisis de Datos:</h3>
+                        <span>Uso de herramientas como Power BI y Excel para realizar análisis de datos y mejorar sistemas de facturación y procesos.</span>
+                    </div>
+                    <div class="sobre-mi-content">
+                        <h3>Gestión de Servidores: </h3>
+                        <span>Administrando servidores, incluyendo tareas de mantenimiento y optimización.</span>
+                    </div>
+
+                    <div class="sobre-mi-content">
+                        <h3>Control de Versiones:  </h3>
+                        <span>Dominio de Git para el control de versiones en proyectos colaborativos.</span>
+                    </div>
+
+             
+                </div>
+                <div class="image-container">
+                    <img src="assets\452242305_1019698389811297_8311835553865266946_n.jpg" alt="Miguel Ángel">
+                </div>
             </div>
         </section>
 
-        <section id="sobre-mi">
-            <h2>Sobre mí</h2>
-            <p>
-                Mi nombre es Miguel Ángel. Comencé a programar con un Amstrad. Actualmente lidero equipos de desarrollo en multinacionales.
-            </p>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>¿Quieres hablar? Envíame un mensaje a través de mis redes sociales o correo electrónico.</p>
+            <a href="index.html" class="button">
+                <i class="fas fa-envelope"></i> Contáctame
+            </a>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 midudev. Todos los derechos reservados.</p>
+        <p>&copy; 2023 brayancopara. Todos los derechos reservados.</p>
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>

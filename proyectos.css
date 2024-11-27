@@ -1,0 +1,181 @@
+/* Sección de proyectos */
+#proyectos {
+    margin-bottom: 60px;
+}
+
+#proyectos h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.project .text-container {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    color: #007aff;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.project a {
+    text-decoration: none;
+    color: #007aff;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 20px;
+    background-color: #f0f0f5;
+    transition: background-color 0.3s;
+}
+
+.project a:hover {
+    background-color: #e0e0e5;
+}
+
+.project .image-container {
+    flex: 0 0 250px; /* Ancho de la imagen */
+    max-width: 250px;
+}
+
+.project .image-container img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project .image-container:hover img {
+    transform: translateX(-10px); /* Efecto de desplazamiento a la izquierda cuando se pasa el mouse */
+}
+
+/* Estilo en modo oscuro para la sección de proyectos */
+body.dark-mode #proyectos h2 {
+    color: #ffffff; /* Color blanco para el título en modo oscuro */
+}
+
+body.dark-mode .project {
+    background-color: #0d1d31; /* Fondo oscuro para los proyectos */
+    color: #ffffff; /* Texto blanco dentro de los proyectos */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
+}
+
+body.dark-mode .project h3 {
+    color: #007aff; /* Mantener el color del título en modo oscuro */
+}
+
+body.dark-mode .project p {
+    color: #ccc; /* Texto más claro en modo oscuro */
+}
+
+body.dark-mode .project a {
+    color: #007aff; /* Color de los enlaces */
+    background-color: #3a3a3c; /* Fondo oscuro para los botones */
+}
+
+body.dark-mode .project a:hover {
+    background-color: #555555; /* Fondo aún más oscuro al pasar el mouse */
+}
+
+/* Contenedor de texto */
+.text-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Iconos de herramientas */
+.tech-icons {
+    margin: 20px 0;
+}
+
+.tech-icons i {
+    font-size: 2rem;
+    color: #333;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.tech-icons i:hover {
+    color: #007aff; /* Cambio de color al pasar el mouse */
+}
+
+/* Botones */
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #007aff;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto hover de los botones */
+.button:hover {
+    background-color: #00b3e3;
+    transform: translateY(-5px);
+}
+
+.button i {
+    margin-right: 8px; /* Espaciado entre el icono y el texto */
+}
+
+
+/* Estilos básicos para la alerta */
+#customAlert {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    width: 300px;
+}
+
+#customAlert button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+#customAlert button:hover {
+    background-color: #218838;
+}

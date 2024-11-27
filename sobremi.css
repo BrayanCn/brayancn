@@ -1,0 +1,103 @@
+/* Sección sobre mí */
+#sobre-mi {
+    background-color: #ffffff;
+    border-radius: 12px;
+    
+    padding: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+#sobre-mi span {
+    color: #242424; /* Color de énfasis */
+
+    font-size: 0.9em; /* Tamaño de fuente un poco más pequeño */
+}
+
+#sobre-mi .content-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#sobre-mi .text-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+#sobre-mi h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#sobre-mi p {
+    font-size: 1.2rem;
+    color: #1a1919;
+    line-height: 1.6;
+}
+
+/* Estilo en modo oscuro para la sección sobre mí */
+body.dark-mode #sobre-mi {
+    background-color: #0d1d31; /* Fondo oscuro para la sección sobre mí */
+    color: #ffffff; /* Texto blanco */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra más prominente */
+}
+
+body.dark-mode #sobre-mi h2 {
+    color: #ffffff; /* Título en blanco en modo oscuro */
+}
+body.dark-mode #sobre-mi span {
+    color: #ffffff; /* Título en blanco en modo oscuro */
+}
+
+body.dark-mode #sobre-mi p {
+    color: #ccc; /* Texto más claro en modo oscuro */
+}
+
+#sobre-mi .image-container {
+    flex: 0 0 250px; /* Ancho de la imagen */
+    max-width: 250px;
+}
+
+#sobre-mi .image-container img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+#sobre-mi .image-container:hover img {
+    transform: translateX(10px); /* Efecto de desplazamiento a la derecha cuando se pasa el mouse */
+}
+
+
+
+.sobre-mi-content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    /* margin-left: 30px; */
+    margin-top: 10px;
+}
+
+/* Título del timeline (a la izquierda) */
+.sobre-mi-content h3 {
+    /* font-size: 1.5rem; */
+    color: #007aff;
+    margin-right: 20px;
+    flex: 0 0 250px;
+    font-weight: bold;
+    font-size: 0.9em; /* Tamaño de fuente un poco más pequeño */
+}
+
+/* Descripción del timeline (a la derecha) */
+.sobre-mi-content p {
+    /* font-size: 1rem; */
+    color: #555;
+    flex: 1;
+    line-height: 1.5;
+    
+}
