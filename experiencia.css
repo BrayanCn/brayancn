@@ -159,13 +159,11 @@ body.dark-mode .timeline-item::after {
     }
 
     .timeline-item::before {
-        left: 50%; /* Centrar la línea vertical */
+
         transform: translateX(-50%); /* Ajustar la posición */
     }
 
-    .timeline-item::after {
-        left: 50%; /* Centrar el punto */
-    }
+
 
     .timeline-content {
         margin-left: 0;
