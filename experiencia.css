@@ -100,3 +100,76 @@ body.dark-mode .timeline-item::before {
 body.dark-mode .timeline-item::after {
     background-color: #00b3e3;
 }
+
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Contenedor del timeline */
+    .timeline {
+        padding-left: 20px; /* Reducir espacio para pantallas más pequeñas */
+    }
+
+    /* Elementos del timeline */
+    .timeline-item {
+        margin-bottom: 20px; /* Reducir espacio entre elementos */
+    }
+
+    /* Línea vertical del timeline */
+    .timeline-item::before {
+        width: 2px; /* Línea más delgada */
+    }
+
+    /* Punto del timeline */
+    .timeline-item::after {
+        width: 8px;
+        height: 8px; /* Punto más pequeño */
+    }
+
+    /* Contenido del timeline */
+    .timeline-content {
+        flex-direction: column; /* Cambiar a diseño en columna */
+        align-items: flex-start; /* Alinear elementos al inicio */
+        margin-left: 0; /* Eliminar margen izquierdo */
+    }
+
+    /* Títulos en el timeline */
+    .timeline-content h3 {
+        font-size: 1.2rem; /* Reducir tamaño del título */
+        margin-right: 0; /* Eliminar margen derecho */
+        margin-bottom: 10px; /* Añadir separación entre título y descripción */
+        flex: none; /* Quitar tamaño fijo */
+    }
+
+    /* Descripciones en el timeline */
+    .timeline-content p {
+        font-size: 0.9rem; /* Reducir tamaño de fuente */
+        line-height: 1.4;
+    }
+}
+
+/* Diseño responsivo para pantallas muy pequeñas (teléfonos) */
+@media (max-width: 480px) {
+    #experiencia h2 {
+        font-size: 1.5rem; /* Reducir tamaño del título principal */
+        text-align: center; /* Centrar el texto */
+    }
+
+    .timeline {
+        padding-left: 10px; /* Reducir espacio para la línea */
+    }
+
+    .timeline-item::before {
+        left: 50%; /* Centrar la línea vertical */
+        transform: translateX(-50%); /* Ajustar la posición */
+    }
+
+    .timeline-item::after {
+        left: 50%; /* Centrar el punto */
+    }
+
+    .timeline-content {
+        margin-left: 0;
+        padding-left: 0;
+        text-align: center; /* Centrar el texto para elementos pequeños */
+    }
+}

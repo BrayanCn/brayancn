@@ -10,6 +10,12 @@ toggleButton.addEventListener("click", () => {
 });
 
 
+document.querySelector('.hamburger').addEventListener('click', () => {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+});
+
+
 function showAlert(type) {
     // Crear el div de la alerta
     var alertBox = document.createElement("div");

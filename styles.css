@@ -40,8 +40,8 @@ main {
 }
 
 .profile-photo img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%; /* Imagen nunca excede su contenedor */
+    height: auto; /* Mantiene la proporción */
     object-fit: cover; /* Asegura que la imagen ocupe todo el contenedor */
 }
 
@@ -180,6 +180,71 @@ body.dark-mode #intro p {
 body.dark-mode footer p {
     color: #ddd;
 }
+
+/* Dispositivos tablet (pantallas medianas) */
+@media (max-width: 768px) {
+    #intro {
+        padding: 30px 15px; /* Reduce el padding */
+    }
+
+    #intro .profile-and-button {
+        flex-direction: column; /* Cambia a diseño vertical */
+        align-items: center; /* Centra los elementos */
+        gap: 15px; /* Espacio reducido */
+    }
+
+    .profile-photo {
+        width: 100px; /* Reduce el tamaño de la foto */
+        height: 100px;
+    }
+
+    #intro h1 {
+        font-size: 1.8rem; /* Reduce el tamaño del título */
+        text-align: center; /* Centra el texto */
+    }
+
+    #intro p {
+        font-size: 1rem; /* Ajusta el tamaño del texto */
+        text-align: center; /* Centra el texto */
+    }
+
+    #intro .buttons {
+        flex-wrap: wrap; /* Permite que los botones se envuelvan */
+        justify-content: center; /* Centra los botones */
+        gap: 10px;
+    }
+
+    #intro .buttons a {
+        font-size: 0.9rem; /* Reduce el tamaño de los botones */
+        padding: 5px 10px; /* Ajusta el padding */
+    }
+}
+
+/* Dispositivos móviles (pantallas pequeñas) */
+@media (max-width: 480px) {
+    #intro {
+        padding: 20px 10px; /* Reduce aún más el padding */
+    }
+
+    .profile-photo {
+        width: 80px; /* Tamaño más pequeño para la foto */
+        height: 80px;
+    }
+
+    #intro h1 {
+        font-size: 1.5rem; /* Título más pequeño */
+    }
+
+    #intro p {
+        font-size: 0.9rem; /* Texto más pequeño */
+    }
+
+    #intro .buttons a {
+        font-size: 0.8rem; /* Tamaño reducido */
+        padding: 5px 8px; /* Ajusta el padding */
+    }
+}
+
 
 /* Estilo para el footer */
 footer {

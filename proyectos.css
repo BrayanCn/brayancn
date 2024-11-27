@@ -179,3 +179,72 @@ body.dark-mode .project a:hover {
 #customAlert button:hover {
     background-color: #218838;
 }
+
+
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project .image-container,
+    .project .text-container {
+        flex: 1 1 100%;
+    }
+
+    .project .text-container {
+        padding-left: 0;
+    }
+
+    .project h3 {
+        font-size: 1.3rem;
+    }
+
+    .project p {
+        font-size: 0.9rem;
+    }
+
+    .project a {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #proyectos h2 {
+        font-size: 1.8rem;
+    }
+
+    .project h3 {
+        font-size: 1.2rem;
+    }
+
+    .project p {
+        font-size: 0.85rem;
+    }
+
+    .project a {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+
+    .tech-icons i {
+        font-size: 1.5rem;
+    }
+}
+
+/* Estilos en modo oscuro para proyectos */
+body.dark-mode .project {
+    background-color: #0d1d31;
+    color: #ffffff;
+}
+
+body.dark-mode .project h3 {
+    color: #00b3e3;
+}
+
+body.dark-mode .project p {
+    color: #ccc;
+}

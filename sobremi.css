@@ -101,3 +101,50 @@ body.dark-mode #sobre-mi p {
     line-height: 1.5;
     
 }
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    #sobre-mi {
+        flex-direction: column; /* Cambiar a diseño vertical */
+        padding: 10px;
+    }
+
+    #sobre-mi .content-container {
+        flex-direction: column;
+    }
+
+    #sobre-mi .text-container {
+        flex: 1 1 100%;
+        padding-right: 0; /* Eliminar espacio lateral */
+    }
+
+    #sobre-mi .image-container {
+        flex: 1 1 100%;
+        max-width: 100%; /* Imagen al 100% del ancho disponible */
+        margin-bottom: 20px;
+    }
+
+    .sobre-mi-content {
+        flex-direction: column; /* Elementos uno bajo el otro */
+        align-items: flex-start;
+    }
+
+    .sobre-mi-content h3 {
+        margin-bottom: 5px;
+        flex: 0 0 auto; /* Eliminar ancho fijo */
+    }
+}
+
+@media (max-width: 480px) {
+    #sobre-mi h2 {
+        font-size: 1.5rem; /* Reducir tamaño de título */
+    }
+
+    #sobre-mi p {
+        font-size: 1rem; /* Reducir tamaño de fuente */
+    }
+
+    .sobre-mi-content h3 {
+        font-size: 0.9rem; /* Reducir tamaño de los subtítulos */
+    }
+}
